@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
                                 //database name
-mongoose.connect('mongodb://localhost/tingrindr');
+mongoose.connect(process.env.MONGODB_URI);
 
 //connect the DB again because seed.js is SEPERATE FILE
 //because seed.js is SEPERATE from app.js
