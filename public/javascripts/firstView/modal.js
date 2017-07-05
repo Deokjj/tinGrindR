@@ -8,10 +8,13 @@ for (var i = modalTriggers.length - 1; i >= 0; i--) {
 
   modalProcess(t, id);
 }
+// if(document.querySelector(modalTriggers[0].getAttribute('data-target')).hasAttribute("open")){
+//   console.log("hey");
+// }
 
 /**
  * It applies the listeners to modal and modal triggers
- * @param  {string} selector [The Dialog ID]
+ * @param  {string} selector [The Dialog ID] -> navIntro
  * @param  {string} button   [The Dialog triggering Button ID]
  */
 function modalProcess(selector, button) {
@@ -29,4 +32,18 @@ function modalProcess(selector, button) {
       dialog.close();
     });
   }
+}
+
+$(document).ready(()=>{
+  if(window.innerWidth >660 && window.innerHeight >560){
+    $('#show-dialog').trigger('click');
+  }
+});
+
+function closeModal(){
+  if(document.querySelector(modalTriggers[0].getAttribute('data-target')).hasAttribute("open")){
+    document.querySelector(modalTriggers[0].getAttribute('data-target')).close();
+    return true;
+  }
+  return false;
 }

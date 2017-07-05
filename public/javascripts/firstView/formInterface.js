@@ -42,14 +42,15 @@ function previousQ(){
 }
 $(".previousQBtn").click(previousQ);
 
+$("#navIntro").click(closeModal);
+
+// var modalTriggers = document.querySelectorAll('[data-toggle="modal"]');
 // Key to navigate Questions
 $(document).keypress((e)=>{
   //Enter key
   if(e.which===13){
-    if($("#navIntro").prop("open")){
-      $("#navIntro").prop("open", false);
-    }
-    else if(qCount!==5){
+    if(closeModal() === true){return;}
+    if(qCount!==5){
       nextQ();
     }
     else{
@@ -58,6 +59,9 @@ $(document).keypress((e)=>{
   }
 });
 $(document).keydown((e)=>{
+  if(e.which === 40 || e.which === 38){
+    if(closeModal() === true){return;}
+  }
   //Down and Up
   if(e.which===40 && qCount !== 5){
     nextQ();
@@ -77,14 +81,11 @@ $('input[name="genderLessInput"]').on('click', function(){
     if ( $(this).is(':checked') ) {
       // $('.genderSliderBox').fadeOut(1000);
       $('#genderInput').prop('disabled', true);
+      $('.genderSliderNVal').addClass('graySlider');
     }
     else {
       // $('.genderSliderBox').fadeIn(1000);
       $('#genderInput').prop('disabled', false);
+      $('.genderSliderNVal').removeClass('graySlider');
     }
-});
-
-$(document).ready(()=>{
-  $('#show-dialog').trigger('click');
-
 });

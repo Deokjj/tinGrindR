@@ -42,35 +42,40 @@ router.post(
       return;
     }
 
-    UserModel.findOne({ userName : username }, "username", (err, user) => {
-      // check if the same user name exists
-      if (username !== null) {
-        console.log("same username");
-        res.redirect("/signup");
-        return;
-      }
-
-      //Create new data in collection when unique name
-      const salt     = bcrypt.genSaltSync(bcryptSalt);
-      const encryptedPassword = bcrypt.hashSync(password, salt);
-
-      //multer creates "req.file" that contains information about the upload
-      const newUser = new UserModel({
-        userName:req.body.usernameInput ,
-        encryptedPassword: encryptedPassword,  //encrypt this
-        name: req.body.nameInput,
-        gender: req.body.genderInput,
-        photoUrl: '/uploads/' + req.file.filename
-      });
-
-      newUser.save((err) => {
+    UserModel.findOne(
+      { userName : username }, (err, user) => {
         if (err) {
-          next(err);
+            next(err);
+            return;
+        }
+      // check if the same user name exists
+        if (user !== null) {
+          console.log("same username");
+          res.redirect("/signup");
           return;
         }
-        // Redirect to home if registration is SUCCESSFUL
-        res.redirect('/home');
-      });
+
+        //Create new data in collection when unique name
+        const salt     = bcrypt.genSaltSync(bcryptSalt);
+        const encryptedPassword = bcrypt.hashSync(password, salt);
+
+        //multer creates "req.file" that contains information about the upload
+        const newUser = new UserModel({
+          userName:req.body.usernameInput ,
+          encryptedPassword: encryptedPassword,  //encrypt this
+          name: req.body.nameInput,
+          gender: req.body.genderInput,
+          photoUrl: '/uploads/' + req.file.filename
+        });
+
+        newUser.save((err) => {
+          if (err) {
+            next(err);
+            return;
+          }
+          // Redirect to home if registration is SUCCESSFUL
+          res.redirect('/home');
+        });
     });
   }
 );

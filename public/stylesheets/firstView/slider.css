@@ -142,3 +142,7 @@ div.genderCheckbox-box{
     top:-5px;
   }
 }
+
+.graySlider{
+  filter: invert(0.3);
+}
