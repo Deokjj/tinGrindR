@@ -1,0 +1,152 @@
+body{
+  font-family: 'Open Sans',Arial,Helvetica Neue,sans-serif;
+}
+
+p{
+  position: relative;
+  color:white;
+  text-align: center;
+}
+
+.intro{
+  top: 38%;
+  font-weight: 100;
+  font-size: 3.2em;
+}
+
+#titleLogo{
+  position: relative;
+  left: 50%;
+  margin-left: -60px;
+  top: 17%;
+  width: 120px;
+}
+#grindrLogo{
+  height:120px;
+  position: absolute;
+  z-index: -1;
+}
+
+#tinderLogo{
+  /*position: absolute;*/
+  height: 60px;
+  margin-left: 27.5px;
+  margin-top: -10px;
+}
+
+div.signButtons{
+  box-sizing: border-box;
+  padding: 0 5%;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  bottom: -43%;
+}
+button.signButton{
+  width: 200px;
+  height: 50px;
+  margin: 5px 5px;
+  color:white;
+  border: 1px solid rgba(253,92,99,0.4);
+  font-size: 1.2em;
+}
+
+@media all and (max-width: 660px) {
+  .intro{
+    top: 40%;
+    font-weight: 100;
+    font-size: 1.8em;
+  }
+
+  #titleLogo{
+    position: relative;
+    left: 50%;
+    margin-left: -40px;
+    top: 20%;
+    width: 100px;
+  }
+  #grindrLogo{
+    height:80px;
+    position: absolute;
+  }
+
+  #tinderLogo{
+    position: absolute;
+    height: 40px;
+    margin-left: 20px;
+    margin-top: -5px;
+  }
+}
+
+@media all and (max-height: 550px) {
+  #titleLogo{
+    top: 10%;
+  }
+  .intro{
+    top:42%;
+  }
+}
+
+.arrowIcon{
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 9%;
+  filter: invert(1);
+  font-size: 45px;
+  animation: bounce 5s infinite;
+}
+
+@-webkit-keyframes bounce{
+  from,20%,60%,to{
+    -webkit-animation-timing-function:cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function:cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform:translate3d(0, 0, 0);
+    transform:translate3d(0, 0, 0)
+    }
+    40%,43%{
+      -webkit-animation-timing-function:cubic-bezier(0.215, 0.61, 0.355, 1);
+      animation-timing-function:cubic-bezier(0.215, 0.61, 0.355, 1);
+      -webkit-transform:translate3d(0, -30px, 0);
+      transform:translate3d(0, -30px, 0)
+      }
+      75%{-webkit-animation-timing-function:cubic-bezier(0.215, 0.61, 0.355, 1);
+        animation-timing-function:cubic-bezier(0.215, 0.61, 0.355, 1);
+        -webkit-transform:translate3d(0, -20px, 0);
+        transform:translate3d(0, -20px, 0)
+        }to{
+          -webkit-transform:translate3d(0, 0, 0);
+          transform:translate3d(0, 0, 0)}
+        }
+
+@keyframes bounce{from,20%,60%,to{-webkit-animation-timing-function:cubic-bezier(0.215, 0.61, 0.355, 1);animation-timing-function:cubic-bezier(0.215, 0.61, 0.355, 1);-webkit-transform:translate3d(0, 0, 0);transform:translate3d(0, 0, 0)}40%,43%{-webkit-animation-timing-function:cubic-bezier(0.215, 0.61, 0.355, 1);animation-timing-function:cubic-bezier(0.215, 0.61, 0.355, 1);-webkit-transform:translate3d(0, -30px, 0);transform:translate3d(0, -30px, 0)}75%{-webkit-animation-timing-function:cubic-bezier(0.215, 0.61, 0.355, 1);animation-timing-function:cubic-bezier(0.215, 0.61, 0.355, 1);-webkit-transform:translate3d(0, -20px, 0);transform:translate3d(0, -20px, 0)}to{-webkit-transform:translate3d(0, 0, 0);transform:translate3d(0, 0, 0)}}
+
+a{
+  text-decoration: none;
+}
+
+
+div.appIntro{
+  box-sizing: border-box;
+  width: 100%;
+  padding: 25px 50px;
+  text-align: center;
+}
+
+div.appIntro i{
+  margin: 10px 0;
+}
+
+div.appIntro p{
+  font-size: 1.8em;
+  font-weight: 500;
+  color: #FD5C63;
+}
+
+div.appIntro span{
+  font-size: 1.2em;
+  font-weight: 300;
+  color: #FD5C63;
+  margin-top: 20px;
+  line-height: 1.3em;
+}

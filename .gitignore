@@ -30,3 +30,9 @@ node_modules
 npm-debug.log
 
 mdl-template-blog
+
+# File that contains environment variables for development
+# (this file has all the secret credentials that we DON'T want to commit)
+.env
+
+public/uploads/

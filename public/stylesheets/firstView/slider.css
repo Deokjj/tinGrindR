@@ -1,0 +1,144 @@
+.genderSliderBox{
+  width: 280px;
+  float: left;
+}
+
+.genderSliderBox p{
+  font-size: 0.3em;
+  margin-left: 5px;
+  height: 0;
+}
+.genderSliderBox span{
+  padding-left: 72px;
+}
+
+.genderVal{
+  position: relative;
+  top: 19px;
+  font-size: 0.6em;
+}
+
+
+.signForm input[type=range] {
+  float: left;
+  -webkit-appearance: none;
+  margin: 38px 10px 8px 15px;
+  width: 250px;
+  background-color: transparent;
+}
+.signForm input[type=range]:focus {
+  outline: none;
+}
+.signForm input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 1px 1px 1px white, 0px 0px 1px white;
+  background: transparent;
+  border-radius: 1.3px;
+  border: 0.2px solid white;
+}
+.signForm input[type=range]::-webkit-slider-thumb {
+  box-shadow: 1px 1px 1px white, 0px 0px 1px white;
+  border: 1px solid white;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: white;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -14px;
+}
+.signForm input[type=range]:focus::-webkit-slider-runnable-track {
+  background: transparent;
+}
+.signForm input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 1px 1px 1px white, 0px 0px 1px white;
+  background: transparent;
+  border-radius: 1.3px;
+  border: 0.2px solid white;
+}
+.signForm input[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px white, 0px 0px 1px white;
+  border: 1px solid white;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: transparent;
+  cursor: pointer;
+}
+.signForm input[type=range]::-ms-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+.signForm input[type=range]::-ms-fill-lower {
+  background: transparent;
+  border: 0.2px solid white;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px white, 0px 0px 1px white;
+}
+.signForm input[type=range]::-ms-fill-upper {
+  background: transparent;
+  border: 0.2px solid white;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px white, 0px 0px 1px white;
+}
+.signForm input[type=range]::-ms-thumb {
+  box-shadow: 1px 1px 1px white, 0px 0px 1px white;
+  border: 1px solid white;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: transparent;
+  cursor: pointer;
+}
+.signForm input[type=range]:focus::-ms-fill-lower {
+  background: transparent;
+}
+.signForm input[type=range]:focus::-ms-fill-upper {
+  background: transparent;
+}
+
+div.genderCheckbox-box{
+  float: left;
+  margin-left: 50px;
+  width: 200px;
+  height:24px;
+  margin-top: -15px;
+}
+.genderlessLabel{
+  position: relative;
+  top: -12px;
+  font-size: 0.4em;
+}
+.mdl-checkbox__box-outline{
+  border: 1px solid white;
+}
+.mdl-checkbox.is-checked .mdl-checkbox__box-outline{
+  border: 1px solid white;
+}
+.mdl-checkbox.is-checked .mdl-checkbox__tick-outline{
+  background-color: white;
+}
+
+@media all and (max-width: 660px) {
+  div.genderCheckbox-box{
+    float: none;
+    margin-top: 60px;;
+    margin-left: 10px;
+  }
+  .genderlessLabel{
+    top:-5px;
+  }
+}

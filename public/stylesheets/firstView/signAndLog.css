@@ -1,0 +1,128 @@
+.signForm{
+  box-sizing: border-box;
+  padding: 3% 10%;
+  width: 100%;
+  color: white;
+  font-weight: 300;
+  line-height: 30px;
+  font-size: 3em;
+  position: relative;
+  overflow: hidden;
+}
+
+
+input[type=text],input[type=password] {
+  width: 500px;
+  padding: 6px 10px;
+  margin: 8px 10px;
+  box-sizing: border-box;
+  background-color: transparent;
+  border-style: none;
+  border-bottom: 1px solid white;
+  font-size: 1em;
+  color: white;
+  font-weight: 100;
+}
+
+input.genderSlider{
+  /*width: 300px;*/
+}
+
+span.description{
+font-size: 0.4em;
+line-height: 0.5em;
+}
+
+._hidden{
+  visibility: hidden;
+}
+
+._visible{
+  visibility: visible;
+  position: absolute;
+  top:50%;
+  margin-top: -55px;
+}
+
+.submitBtn{
+  position: absolute !important;
+  width: 600px;
+  font-size: 1em !important;
+  font-weight: 300 !important;
+  color: white !important;
+  height: 80px !important;
+}
+
+.arrowBtn{
+  position: absolute;
+  cursor: pointer;
+  color: silver;
+  margin-left: 10px;
+  font-size: 1.8em;
+  font-weight: 100;
+}
+.arrowBtn:hover{
+  color: white;
+}
+
+.previousQBtn{
+  top:15%;
+  margin-top: -10px;
+}
+
+.nextQBtn{
+  bottom: 15%;
+}
+
+input#photoUrl {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+#photoUrl + label {
+    font-size: 0.6em;
+    text-align: center;
+    font-weight: 500;
+    height: 35px;
+    width: 250px;
+    border-radius: 7px;
+    padding: 10px 0;
+    color: white;
+    background-color: transparent;
+    border: 1px solid #fd5c63;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#photoUrl:focus + label,
+#photoUrl + label:hover {
+    background-color: red;
+}
+
+@media all and (max-width: 660px) {
+  .signForm{
+    font-size: 2em;
+    line-height: 30px;
+  }
+  input[type=text],input[type=password] {
+    width: 250px;
+  }
+  .submitBtn{
+    width: 75%;
+  }
+}
+@media all and (max-height: 560px){
+  .previousQBtn{
+    top:8%;
+  }
+  .nextQBtn{
+    bottom: 8%;
+  }
+}
+
+.whiteIt{
+  color: white;
+}

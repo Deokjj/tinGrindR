@@ -1,0 +1,41 @@
+.signupIntro{
+  color: white;
+  position: absolute;
+  top:10%;
+  right: 8%;
+}
+
+dialog#navIntro{
+  background: linear-gradient(to right, rgba(255, 165, 0, 0.6), rgba(253, 92, 99, 0.6));
+  width: 500px;
+  height: 400px;
+}
+
+dialog#navIntro p{
+  font-size: 0.8em;
+  line-height: 1.5em;
+}
+
+@media all and (max-width: 660px){
+    .signUpModal, dialog#navIntro{
+      width: 0.1px !important;
+    	height: 0.1px !important;
+    	opacity: 0 !important;
+    	overflow: hidden !important;
+    	position: absolute !important;
+      visibility: hidden !important;
+    	z-index: -1 !important;
+    }
+}
+
+@media all and (max-height: 560px){
+  .signUpModal, dialog#navIntro{
+    width: 0.1px !important;
+    height: 0.1px !important;
+    opacity: 0 !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    visibility: hidden !important;
+    z-index: -1 !important;
+  }
+}

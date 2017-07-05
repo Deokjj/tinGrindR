@@ -7,8 +7,11 @@ const bodyParser   = require('body-parser');
 const layouts      = require('express-ejs-layouts');
 const mongoose     = require('mongoose');
 
+// Import the "dotenv" package and load variables from the ".env" file
+// (Must be at the top before we try to use the variables)
+require('dotenv').config();
 
-mongoose.connect('mongodb://localhost/tingrinder');
+mongoose.connect(process.env.MONGODB_URI);
 
 const app = express();
 
@@ -17,7 +20,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 // default value for title local
-app.locals.title = 'Express - Generated with IronGenerator';
+app.locals.title = 'tinGrindR';
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -28,8 +31,15 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(layouts);
 
-const index = require('./routes/index');
-app.use('/', index);
+
+//InitialView Route -before logged in or signed up
+const first = require('./routes/first.js'); // first.js
+app.use('/',first);
+
+//home page - after logged in or signed up
+const index = require('./routes/index'); // index.js
+app.use('/home', index);
+
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
