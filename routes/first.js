@@ -35,6 +35,7 @@ router.post(
     //retrieve variables by body parsing
     const username = req.body.usernameInput;
     const password = req.body.passwordInput;
+
     //check empty String and redriect
     if (username === "" || password === "") {
       console.log("empty");
@@ -59,11 +60,15 @@ router.post(
         const salt     = bcrypt.genSaltSync(bcryptSalt);
         const encryptedPassword = bcrypt.hashSync(password, salt);
 
+
+
         //multer creates "req.file" that contains information about the upload
         const newUser = new UserModel({
           userName:req.body.usernameInput ,
           encryptedPassword: encryptedPassword,  //encrypt this
           name: req.body.nameInput,
+          // body.genderInput is undefined
+          // when check box is 'on' automatically
           gender: req.body.genderInput,
           photoUrl: '/uploads/' + req.file.filename
         });

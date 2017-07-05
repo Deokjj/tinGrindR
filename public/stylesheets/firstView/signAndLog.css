@@ -24,9 +24,6 @@ input[type=text],input[type=password] {
   font-weight: 100;
 }
 
-input.genderSlider{
-  /*width: 300px;*/
-}
 
 span.description{
 font-size: 0.4em;
@@ -100,6 +97,14 @@ input#photoUrl {
 #photoUrl:focus + label,
 #photoUrl + label:hover {
     background-color: red;
+}
+
+label[for=photoUrl] i.material-icons{
+  font-size: 1.5em;
+}
+label[for=photoUrl] span{
+  position: relative;
+  top: -10px;
 }
 
 @media all and (max-width: 660px) {

@@ -1,0 +1,37 @@
+.usernameRow{
+  margin-top: 18%;
+}
+.passwordRow{
+  margin-top: 10%;
+}
+
+.regularLogin{
+  height: 100%;
+}
+
+.loginBtn{
+  margin-top: 5%;
+}
+
+.socialLoginBtn{
+  height: 80px !important;
+  width: 200px !important;
+  color: white;
+  background: transparent;
+
+}
+
+.smIcon{
+  width: 36px;
+}
+
+p.socialLoginIntro{
+  font-size: 0.6em;
+  /*text-align: left;*/
+  font-weight: 400;
+}
+
+.socialLoginBox{
+  text-align: center;
+  margin-top: 30%;
+}
