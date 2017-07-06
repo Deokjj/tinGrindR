@@ -6,7 +6,7 @@ html, body{
   z-index: -2;
   height: 100%;
   width: 100%;
-  background: linear-gradient(223deg, #ffa500, #fd5c63, #000000);
+  background: linear-gradient(223deg, #8B0000, #fd5c63, #000000);
   background-size: 600% 600%;
   -webkit-animation: AnimationName 20s ease infinite;
   -moz-animation: AnimationName 20s ease infinite;

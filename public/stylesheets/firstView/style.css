@@ -25,6 +25,7 @@ p{
   height:120px;
   position: absolute;
   z-index: -1;
+  filter: invert(1);
 }
 
 #tinderLogo{
@@ -32,6 +33,7 @@ p{
   height: 60px;
   margin-left: 27.5px;
   margin-top: -10px;
+  filter: brightness(100) invert(1);
 }
 
 div.signButtons{
