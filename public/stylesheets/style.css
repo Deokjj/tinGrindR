@@ -1,3 +1,7 @@
+body{
+  font-family: 'Open Sans',Arial,Helvetica Neue,sans-serif;
+  font-weight: 100;
+}
 body::before {
     background-size: cover;
     background-attachment: fixed;
@@ -188,10 +192,6 @@ body .screen {
   margin: 0;
 }
 
-.profilePic .mdl-card__media {
-  background-image: url('../images/deokjae.jpg');
-}
-
 
 .screen .something-else .mdl-card__media {
   display: -webkit-flex;
@@ -229,12 +229,6 @@ body .screen {
   background-color: #F5F5F5;
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
-}
-.screen .on-the-road-again .mdl-card__media {
-  background-image: url('../images/road.jpg');
-}
-.screen .shopping .mdl-card__media {
-  background-image: url('../images/shopping.jpg');
 }
 .screen .screen__posts > .demo-nav {
   margin: 12px 15px;
@@ -507,4 +501,5 @@ body .screen {
           align-items: center;
   background-color: white;
   box-sizing: border-box;
+  border-top: 1px solid #e4e4e4 !important;
 }

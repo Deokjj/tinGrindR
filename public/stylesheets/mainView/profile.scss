@@ -1,0 +1,55 @@
+$mainColor : rgba(253, 92, 99,0.4);
+$darkMainColor: #8B0000;
+$font: rgb(105,105,105);
+//Only Applied to profileView class
+.profileView{
+  color: $font;
+
+  .profilePic{
+    background-position: center;
+    background-size: cover;
+    border-radius: 5%;
+  }
+
+  p{
+    margin-bottom: 5px;
+  }
+
+  input{
+    border: none;
+  }
+
+  #nameInput{
+    font-size: 2.5em;
+    color:black;
+  }
+
+  .genderDisplay{
+    font-size: 1.8em;
+  }
+
+  a, button{
+    width: 100%;
+    padding: 0;
+    background-color: $mainColor;
+    color: $font;
+  }
+
+  .cookieIcon{
+      width: 30px;
+  }
+
+  #introInput{
+    font-size: 1.5em;
+  }
+
+  .btnPadding{
+    padding:0 15%;
+  }
+  //mobile
+  @media all and (max-width: 660px) {
+    .btnPadding{
+      padding: 0;
+    }
+  }
+}//profileView Ends

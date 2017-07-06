@@ -1,18 +1,22 @@
 <main class="signForm loginForm mdl-grid">
-  <!-- UserName -->
-   <div class="mdl-cell--8-col mdl-cell--8-col-tablet mdl-cell--4-col-phone loginNameBox">
-     <div class="usernameRow">
+  <form method="post" action="/login" class="mdl-cell--8-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+
+    <div class="loginNameBox">
+      <!-- UserName -->
+      <div class="usernameRow">
        <label for="usernameInput"> Username </label><br>
        <input  id="usernameInput" type="text" name="usernameInput">
-     </div>
-   <!-- Password -->
-     <div class="passwordRow">
+      </div>
+      <!-- Password -->
+      <div class="passwordRow">
        <label for="passwordInput"> Password </label><br>
        <input  id="passwordInput" type="password" name="passwordInput">
-     </div>
+      </div>
 
-     <button class ='mdc-button mdc-button--raised submitBtn loginBtn btnColor'> Log In </button>
-   </div>
+      <button class ='mdc-button mdc-button--raised submitBtn loginBtn btnColor'> Log In </button>
+    </div>
+
+   </form>
 
    <div class="mdl-cell--4-col mdl-cell--8-col-tablet mdl-cell--4-col-phone loginPasswordBox">
      <div class="socialLoginBox">

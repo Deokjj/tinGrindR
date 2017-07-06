@@ -245,6 +245,7 @@ main{
           align-items: center;
   background-color: white;
   box-sizing: border-box;
+  border-top: 1px solid #e4e4e4 !important;
 }
 .mdl-mini-footer--left-section{
   margin-top: 6px;

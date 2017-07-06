@@ -10,11 +10,19 @@ const bcryptSalt = 10;
 
 /* GET intial page. */
 router.get('/', (req, res, next) => {
+  if (req.user) {
+    res.redirect('/home');
+    return;
+  }
   res.render('firstView/first.ejs',{layout:'firstViewLayout.ejs'}); //first.ejs
 });
 
 /* Signup page */
 router.get('/signup',(req,res,next) => {
+  if (req.user) {
+    res.redirect('/home');
+    return;
+  }
   res.render('firstView/signUp.ejs',{layout:'firstViewLayout.ejs'});
 });
 
@@ -85,12 +93,35 @@ router.post(
   }
 );
 
+const passport = require('passport');
+
 /* Login page */
 router.get('/login',(req,res,next) => {
+  //show main page if logged in
+  if (req.user) {
+    res.redirect('/home');
+    return;
+  }
   res.render('firstView/logIn.ejs',{layout:'firstViewLayout.ejs'});
 });
 
+router.post('/login',
+  passport.authenticate(
+      'local',  // 1st argument -> name of the strategy
+                //                 (determined by the strategy's npm package)
+      {         // 2nd argument -> settings object
+        successRedirect: '/home',     // "successRedirect" (where to go if login worked)
+        failureRedirect: '/login' // "failureRedirect" (where to go if login failed)
+      }
+  )
+);
 
+/* LogOut*/
+router.get('/logout', (req, res, next) => {
+    // the "req.logout()" function is defined by the passport middleware (app.js)
+    req.logout();
+    res.redirect('/');
+});
 
 
 

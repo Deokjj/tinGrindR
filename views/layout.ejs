@@ -9,10 +9,19 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-orange.min.css">
-    <link rel="stylesheet" href="/stylesheets/style.css">
+    <!-- <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-orange.min.css"> -->
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
     <link rel="stylesheet" href="/stylesheets/header.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/mainView/profile.min.css">
 
+    <link rel="stylesheet prefetch" href="//fonts.googleapis.com/css?family=Roboto" type="text/css">
+    <link rel="stylesheet prefetch" href="//fonts.googleapis.com/css?family=PT+Sans+Narrow" type="text/css">
+    <link rel="stylesheet prefetch" href="//fonts.googleapis.com/css?family=Open+Sans:400,300" type="text/css">
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
   </head>
 
 
@@ -22,53 +31,41 @@
       <div class="container clearfix">
         <image src="/images/tinGrindr.png" id="tinGrindrLetter">
         <nav>
-          <a href="">Chat</a>
-          <a href="">Match</a>
-          <a href="">List</a>
-          <div id="faceIcon">
-          <a href=""></a></div>
+          <a href=""><i class="material-icons chatIcon">question_answer</i></a>
+          <button id="faceIcon" style="background-image: url('<%=currentUser.photoUrl%>')" onclick="location.href = '/profile/';"></button>
         </nav>
-      </div>
     </header>
-    <!-- <div id="titleLogo">
-      <image src="/images/grindrLogo.png" class= "titleLogo" id="grindrLogo">
-      <image src="/images/tinderLogo.png" class= "titleLogo" id="tinderLogo">
-    </div> -->
-
 
     <div class="screen mdl-layout mdl-js-layout has-drawer is-upgraded">
-      <main class="mdl-layout__content">
-        <div class="screen__posts mdl-grid">
+      <!-- mdl-js-layout has-drawer is-upgraded -->
 
         <%- body %>
 
+      <footer class="mdl-mini-footer">
+        <div class="mdl-mini-footer--left-section">
+          <button class="mdl-mini-footer--social-btn social-btn social-btn__linkedin">
+            <span class="visuallyhidden">linkedin</span>
+          </button>
+          <button class="mdl-mini-footer--social-btn social-btn social-btn__instagram">
+            <span class="visuallyhidden">instagram</span>
+          </button>
+          <button class="mdl-mini-footer--social-btn social-btn social-btn__gplus">
+            <span class="visuallyhidden">Google Plus</span>
+          </button>
         </div>
-        <footer class="mdl-mini-footer">
-          <div class="mdl-mini-footer--left-section">
-            <button class="mdl-mini-footer--social-btn social-btn social-btn__linkedin">
-              <span class="visuallyhidden">linkedin</span>
-            </button>
-            <button class="mdl-mini-footer--social-btn social-btn social-btn__instagram">
-              <span class="visuallyhidden">instagram</span>
-            </button>
-            <button class="mdl-mini-footer--social-btn social-btn social-btn__gplus">
-              <span class="visuallyhidden">Google Plus</span>
-            </button>
-          </div>
-          <div class="mdl-mini-footer--right-section">
-            <button class="mdl-mini-footer--social-btn social-btn__share">
-              <i class="material-icons" role="presentation">share</i>
-              <span class="visuallyhidden">share</span>
-            </button>
-          </div>
-        </footer>
-      </main>
-      <div class="mdl-layout__obfuscator"></div>
+        <div class="mdl-mini-footer--right-section">
+          <button class="mdl-mini-footer--social-btn social-btn__share">
+            <i class="material-icons" role="presentation">share</i>
+            <span class="visuallyhidden">share</span>
+          </button>
+        </div>
+      </footer>
     </div>
     <script
       src="https://code.jquery.com/jquery-3.2.1.min.js"
       integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
       crossorigin="anonymous"></script>
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="/javascripts/header.js"></script>
   </body>
 </html>
