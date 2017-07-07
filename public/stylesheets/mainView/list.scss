@@ -11,6 +11,9 @@
     font-size: 1.7em;
     line-height: 1.5em;
     cursor: pointer;
+    text-overflow: clip;
+    overflow-x: hidden;
+    height: 36px;
   }
   span{
     font-size: 1.3em;
@@ -24,8 +27,8 @@
     cursor: pointer;
   }
   .cookieLogo{
-    width:30px;
-    height:30px;
+    width:30px !important;
+    height:30px !important;
     background-image: url("/../images/cookie.png");
     background-size: contain;
     background-position: center;

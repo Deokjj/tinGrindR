@@ -1,0 +1,45 @@
+<div id="viewport">
+    <ul class="stack">
+      <%userArr.forEach((user) => {%>
+        <li style="background-image: url('<%=user.photoUrl%>')" onmousedown="clickOrDrag('/profile/<%=user._id%>')"></li>
+
+        <!-- <form class="profileView profileEditForm screen__posts mdl-grid __hidden">
+
+          <div class="mdl-grid bigBox"> -->
+
+            <!-- profile Header -->
+            <!-- <div class="mdl-cell mdl-cell--6-col mdl-cell--8-tablet mdl-cell--middle introCard">
+              <h4><%=user.name%></h4>
+              <p class="ageDisplay">Age: <%=user.age%></p>
+              <p class="genderDisplay">Gender: <%=user.gender%></p>
+              <p>Joined TinGrindr on <b><%=user.createdAt.toISOString().substring(0, 10)%></b></p>
+            </div>
+          </div>
+
+          <div class="mdl-cell mdl-cell--3-col  mdl-cell--2-col-tablet mdl-cell--1-col-phone">
+            <a class ='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect cookieBtn'>
+              <img class="cookieIcon" src="/images/cookie.png"> <span id="cookie"><%=user.cookies%></span>
+            </a>
+          </div>
+          <div class="mdl-cell mdl-cell--3-col  mdl-cell--2-col-tablet mdl-cell--1-col-phone">
+            <a class ='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'>Message</a>
+          </div>
+          <div class="mdl-cell mdl-cell--3-col  mdl-cell--2-col-tablet mdl-cell--1-col-phone">
+            <a class ='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'>Block</a>
+          </div>
+          <div class="mdl-cell mdl-cell--3-col  mdl-cell--2-col-tablet mdl-cell--1-col-phone">
+            <a class ='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'>Report</a>
+          </div>
+
+
+          <div class="mdl-cell mdl-cell--12-col _15Padding">
+            <div class="mdl-textfield mdl-js-textfield introTextBox">
+              <p style="font-size: 1.1em;"><%=user.intro%></p>
+          </div>
+        </div>
+
+      </form> -->
+      <%})%>
+
+    </ul>
+</div>

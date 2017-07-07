@@ -36,8 +36,9 @@ $font: rgb(105,105,105);
   a, button{
     width: 100%;
     padding: 0;
-    background-color: $mainColor;
-    color: $font;
+    background : linear-gradient(45deg, rgba(253,92,99,0.6), rgba(139,0,0,0.6));
+    // background-color: $mainColor;
+    color: white;
   }
 
   .cookieIcon{
@@ -54,7 +55,8 @@ $font: rgb(105,105,105);
   }
 
   .mdl-textfield__label:after{
-    background-color: $mainColor;
+    background : linear-gradient(45deg, rgba(253,92,99,0.7), rgba(139,0,0,0.7));
+    // background-color: $mainColor;
   }
 
   ._15Padding{

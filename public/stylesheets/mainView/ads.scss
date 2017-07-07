@@ -1,0 +1,52 @@
+.ads{
+  padding: 0 10%;
+  img{
+    height: 60px;
+    width: 60px;
+    float: right;
+    border-radius: 50%;
+  }
+  h3{
+    margin-bottom: 50px;
+  }
+  p{
+    color: darkslategray;
+  }
+  .forPadding{
+    padding: 0 10%;
+  }
+
+  .introTextBox{
+    width: 100%;
+  }
+
+  .headerSub{
+    width: 50vh;
+  }
+
+  textarea#introInput,
+  label.introLabel {
+    font-size: 0.9em;
+    line-height: 1.6em;
+  }
+
+  .mdl-textfield__label:after{
+    background : linear-gradient(45deg, rgba(253,92,99,0.7), rgba(139,0,0,0.7));
+    // background-color: $mainColor;
+  }
+
+  ._15Padding{
+    padding:0 10%;
+  }
+
+  .adSubmit{
+    margin: 0 auto;
+  }
+  a, button{
+    width: 100%;
+    padding: 0;
+    background : linear-gradient(45deg, rgba(253,92,99,0.6), rgba(139,0,0,0.6));
+    // background-color: $mainColor;
+    color: white;
+  }
+}

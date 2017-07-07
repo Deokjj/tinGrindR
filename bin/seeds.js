@@ -35,6 +35,17 @@ const userArr=[
     mentions:[]
   },
   {
+    userName: 'demo16',
+    encryptedPassword: bcrypt.hashSync("demo16", bcrypt.genSaltSync(10)),
+    name: 'deokjae0',
+    age: 21,
+    gender: 0.8,
+    intro: "Hi.",
+    photoUrl: "/images/seeds/deokjae1.jpg",
+    cookies: 60,
+    mentions:[]
+  },
+  {
     userName: 'demo2',
     encryptedPassword: bcrypt.hashSync("demo2", bcrypt.genSaltSync(10)),
     name: 'deokjae1',
