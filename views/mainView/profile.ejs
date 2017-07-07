@@ -1,21 +1,20 @@
 <!--Own profile view -->
-<main class="mdl-layout__content" style="width:100%;">
+<!-- <main class="mdl-layout__content" style="width:100%;"> -->
+                                      <!-- enctype="multipart/form-data" -->
+  <form class="profileView profileEditForm screen__posts mdl-grid" action="/profile" method="post">
 
-  <form class="profileView profileEditForm screen__posts mdl-grid" action="/profile" method="post" enctype="multipart/form-data">
-
-    <div class="mdl-layout-spacer"></div>
-
-    <div class="mdl-cell mdl-card mdl-cell mdl-cell--4-col pictureContainer">
+    <div class="mdl-grid bigBox">
+    <!-- Face Photo -->
+    <div class="mdl-cell mdl-card mdl-cell mdl-cell--6-col mdl-cell--8-tablet mdl-cell--middle pictureContainer">
       <div class="mdl-card__media profilePic" style="background-image: url('<%=currentUser.photoUrl%>')">
       </div>
       <!--photo EditButtom add here  -->
     </div>
 
-    <div class="mdl-layout-spacer"></div>
-              <!-- mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet mdl-cell--0-col-phone -->
-
-    <div class="mdl-cell mdl-cell--8-col mdl-cell--middle introCard">
+    <!-- profile Header -->
+    <div class="mdl-cell mdl-cell--6-col mdl-cell--8-tablet mdl-cell--middle introCard">
       <input  id="nameInput" type="text" name="nameInput" value="<%=currentUser.name%>">
+      <p class="ageDisplay">Age: <input  id="ageInput" type="number" name="ageInput" value="<%=currentUser.age%>"></p>
       <p class="genderDisplay">Gender: <%=currentUser.gender%></p>
       <p>Joined TinGrindr on <b><%=currentUser.createdAt.toISOString().substring(0, 10)%></b></p>
 
@@ -25,13 +24,13 @@
       oninput="genderVal(this.value)" onchange="genderVal(this.value)">
         <p>fem <span></span>Androgynous<span></span>Mas</p>
       </div> -->
-
+    </div>
     </div>
 
     <div class="mdl-cell mdl-cell--3-col  mdl-cell--2-col-tablet mdl-cell--1-col-phone">
-      <button class ='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'>
-        <img class="cookieIcon" src="/images/cookie.png"> <span>0</span>
-      </button>
+      <a class ='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect cookieBtn'>
+        <img class="cookieIcon" src="/images/cookie.png"> <span id="cookie"><%=currentUser.cookies%></span>
+      </a>
     </div>
     <div class="mdl-cell mdl-cell--3-col  mdl-cell--2-col-tablet mdl-cell--1-col-phone">
       <a class ='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'>Message</a>
@@ -44,27 +43,20 @@
     </div>
 
 
-
-    <!-- <textarea id="introInput" name="introInput" value="<%=currentUser.intro%>" placeholder="Please update your intro"></textarea> -->
-    <div class="mdl-cell mdl-cell--2-col mdl-cell--1-col-tablet mdl-cell--0-col-phone"></div>
-    <div class="mdl-cell mdl-cell--8-col mdl-cell--middle">
-      <div class="mdl-textfield mdl-js-textfield">
-        <textarea class="mdl-textfield__input" type="text" rows= "5" id="introInput" style="width: 193% !important;"></textarea>
-        <label class="mdl-textfield__label" for="introInput">Please update your Introduction..</label>
+    <div class="mdl-cell mdl-cell--12-col _15Padding">
+      <div class="mdl-textfield mdl-js-textfield introTextBox">
+        <textarea class="mdl-textfield__input" type="text" rows= "5" id="introInput" name="introInput"><%=currentUser.intro%></textarea>
+        <label class="mdl-textfield__label introLabel" for="introInput" >Please update your Introduction..</label>
       </div>
     </div>
-    <div class="mdl-layout-spacer"></div>
 
-
-    <div class="mdl-cell mdl-cell--12-col btnPadding">
-      <a class ='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'>Edit</a>
+    <!-- Edit Submit Btn -->
+    <div class="mdl-cell mdl-cell--12-col _15Padding">
+      <button class ='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'>Edit</button>
     </div>
 
-    <div class="mdl-cell mdl-cell--12-col btnPadding">
-      <a class ='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'>LOG OUT</a>
+    <div class="mdl-cell mdl-cell--12-col _15Padding">
+      <a class ='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect' href="/logout">LOG OUT</a>
     </div>
 
   </form>
-
-
-</main>

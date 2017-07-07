@@ -1,14 +1,18 @@
-$mainColor : rgba(253, 92, 99,0.4);
+$mainColor : rgba(253, 92, 99,0.6);
 $darkMainColor: #8B0000;
 $font: rgb(105,105,105);
 //Only Applied to profileView class
 .profileView{
   color: $font;
-
   .profilePic{
     background-position: center;
     background-size: cover;
     border-radius: 5%;
+  }
+  .bigBox{
+    width:100%;
+    padding: 0 15%;
+    box-sizing: border-box;
   }
 
   p{
@@ -24,8 +28,9 @@ $font: rgb(105,105,105);
     color:black;
   }
 
+  .ageDisplay,
   .genderDisplay{
-    font-size: 1.8em;
+    font-size: 1.6em;
   }
 
   a, button{
@@ -39,16 +44,28 @@ $font: rgb(105,105,105);
       width: 30px;
   }
 
-  #introInput{
-    font-size: 1.5em;
+  .introTextBox{
+    width: 100%;
   }
 
-  .btnPadding{
+  textarea#introInput,
+  label.introLabel {
+    font-size: 1.4em;
+  }
+
+  .mdl-textfield__label:after{
+    background-color: $mainColor;
+  }
+
+  ._15Padding{
     padding:0 15%;
   }
   //mobile
   @media all and (max-width: 660px) {
     .btnPadding{
+      padding: 0;
+    }
+    .bigBox{
       padding: 0;
     }
   }

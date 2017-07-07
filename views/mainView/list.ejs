@@ -1,0 +1,23 @@
+<div class="mdl-grid gridViewContainer">
+
+<%userArr.forEach((user)=>{%>
+<div class="mdl-cell mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone mdl-cell--middle">
+  <a href="/profile/<%=user._id%>">
+    <div class="mdl-card__media profilePic" style="background-image: url('<%=user.photoUrl%>')">
+    </div>
+  </a>
+  <div class="mdl-card__supporting-text meta mdl-color-text--grey-600 headline">
+    <div class="cookieLogo"></div>
+    <div>
+      <%if(user.name.length>8){%>
+        <strong><%=user.name.slice(0,8)+"..."%></strong>
+      <%}else{%>
+        <strong><%=user.name%></strong>
+      <%}%>
+      <span><%=user.age%>, <img src="images/genderIcon.png" class="gendericon"> <%=user.gender%></span>
+    </div>
+  </div>
+</div>
+<%});%>
+
+</div>

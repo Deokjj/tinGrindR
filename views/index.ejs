@@ -1,4 +1,4 @@
-<main class="mdl-layout__content">
+<!-- <main class="mdl-layout__content"> -->
   <div class="screen__posts mdl-grid">
 
     <!-- Tinder img go here -->
@@ -8,11 +8,36 @@
     </div>
 
     <!--Grindr like view-->
-    <div class="mdl-card something-else mdl-cell mdl-cell--12-col">
-      <div class="mdl-card__media mdl-color-text--grey-50">
-        <img src="images/grindr.jpg" style="height: 300px; width:300px;">
+    <div class="mdl-grid gridViewContainer">
+    <%userArr.slice(0,4).forEach((user)=>{%>
+    <div class="mdl-cell mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone mdl-cell--middle">
+      <a href="/profile/<%=user._id%>">
+        <div class="mdl-card__media profilePic" style="background-image: url('<%=user.photoUrl%>')">
+        </div>
+      </a>
+      <div class="mdl-card__supporting-text meta mdl-color-text--grey-600 headline">
+        <div class="cookieLogo"></div>
+        <div>
+          <%if(user.name.length>8){%>
+            <strong><%=user.name.slice(0,8)+"..."%></strong>
+          <%}else{%>
+            <strong><%=user.name%></strong>
+          <%}%>
+          <span><%=user.age%>, <img src="images/genderIcon.png" class="gendericon"> <%=user.gender%></span>
+        </div>
       </div>
     </div>
+    <%});%>
+    </div>
+    <nav class="demo-nav mdl-cell mdl-cell--12-col">
+      <div class="section-spacer"></div>
+      <a href="/list" class="demo-nav__button" title="show more" style="color: gray; font-size: 1.2em;">
+        Expand
+        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+          <i class="material-icons" role="presentation" style="font-size: 1.2em;">arrow_forward</i>
+        </button>
+      </a>
+    </nav>
 
     <!-- Thread -->
     <div class="mdl-card amazing mdl-cell mdl-cell--12-col">
@@ -25,4 +50,4 @@
     </div>
 
   </div>
-</main>
+<!-- </main> -->

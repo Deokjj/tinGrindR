@@ -8,10 +8,11 @@ const UserModel = mongoose.model(
       userName : {type:String},
       encryptedPassword : {type:String},
       name: {type:String},
-      age: {type:Number, default:undefined},
+      age: {type:Number},
       gender: {type:Number, default:undefined},
       intro: {type:String, default:""},
       photoUrl:{type:String},
+      cookies:{type:Number, default:0},
       mentions:[      //Array of ↓ object
         {
           mention:{type:String},

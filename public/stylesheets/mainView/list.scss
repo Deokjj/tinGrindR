@@ -1,0 +1,105 @@
+.gridViewContainer{
+  padding: 0 10%;
+  .profilePic{
+    background-position: center;
+    background-size: cover;
+    border-radius: 5% 5% 0 0;
+    height:33vh;
+    cursor: pointer;
+  }
+  strong{
+    font-size: 1.7em;
+    line-height: 1.5em;
+    cursor: pointer;
+  }
+  span{
+    font-size: 1.3em;
+    font-weight: 300;
+    cursor: pointer;
+  }
+  .gendericon{
+    width:20px;
+    height: auto;
+    filter: brightness(0.3);
+    cursor: pointer;
+  }
+  .cookieLogo{
+    width:30px;
+    height:30px;
+    background-image: url("/../images/cookie.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+
+  .headline{
+    border-radius: 0 0 5px 5px;
+    border: 1px solid lightgray;
+  }
+}
+
+// Phone
+/* Portrait */
+@media only screen
+  and (max-device-width: 737px)
+  and (orientation: portrait) {
+    .gridViewContainer{
+      padding: 0;
+      .profilePic{
+        height:25vh;
+      }
+      strong{
+        font-size: 1.1em;
+        line-height: 1em;
+      }
+      span{
+        font-size: 0.8em;
+      }
+    }
+}
+
+/* Landscape */
+@media only screen
+  and (max-device-width: 737px)
+  and (orientation: landscape) {
+    .gridViewContainer{
+      padding: 0;
+      .profilePic{
+        height:36vh;
+      }
+      strong{
+        font-size: 1.1em;
+        line-height: 1em;
+      }
+      span{
+        font-size: 0.8em;
+      }
+    }
+}
+
+// Tablet
+/* Portrait */
+@media only screen
+  and (min-device-width: 737px)
+  and (max-device-width: 1024px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .gridViewContainer{
+      padding: 0;
+      .profilePic{
+        height:20vh;
+      }
+    }
+}
+
+/* Landscape */
+@media only screen
+  and (min-device-width: 737px)
+  and (max-device-width: 1024px)
+  and (orientation: landscape)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .gridViewContainer{
+      padding: 0 10%;
+    }
+}

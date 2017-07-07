@@ -1,0 +1,49 @@
+<form class="profileView profileEditForm screen__posts mdl-grid">
+
+  <div class="mdl-grid bigBox">
+  <!-- Face Photo -->
+  <div class="mdl-cell mdl-card mdl-cell mdl-cell--6-col mdl-cell--8-tablet mdl-cell--middle pictureContainer">
+    <div class="mdl-card__media profilePic" style="background-image: url('<%=theUser.photoUrl%>')">
+    </div>
+    <!--photo EditButtom add here  -->
+  </div>
+
+  <!-- profile Header -->
+  <div class="mdl-cell mdl-cell--6-col mdl-cell--8-tablet mdl-cell--middle introCard">
+    <h4><%=theUser.name%></h4>
+    <p class="ageDisplay">Age: <%=theUser.age%></p>
+    <p class="genderDisplay">Gender: <%=theUser.gender%></p>
+    <p>Joined TinGrindr on <b><%=theUser.createdAt.toISOString().substring(0, 10)%></b></p>
+
+    <!-- <div class ="genderSliderBox">
+    <input id="genderInput" type="range" name="genderInput" min="0" max="1"
+    step="0.1" value="0.5"
+    oninput="genderVal(this.value)" onchange="genderVal(this.value)">
+      <p>fem <span></span>Androgynous<span></span>Mas</p>
+    </div> -->
+  </div>
+  </div>
+
+  <div class="mdl-cell mdl-cell--3-col  mdl-cell--2-col-tablet mdl-cell--1-col-phone">
+    <a class ='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect cookieBtn'>
+      <img class="cookieIcon" src="/images/cookie.png"> <span id="cookie"><%=theUser.cookies%></span>
+    </a>
+  </div>
+  <div class="mdl-cell mdl-cell--3-col  mdl-cell--2-col-tablet mdl-cell--1-col-phone">
+    <a class ='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'>Message</a>
+  </div>
+  <div class="mdl-cell mdl-cell--3-col  mdl-cell--2-col-tablet mdl-cell--1-col-phone">
+    <a class ='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'>Block</a>
+  </div>
+  <div class="mdl-cell mdl-cell--3-col  mdl-cell--2-col-tablet mdl-cell--1-col-phone">
+    <a class ='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'>Report</a>
+  </div>
+
+
+  <div class="mdl-cell mdl-cell--12-col _15Padding">
+    <div class="mdl-textfield mdl-js-textfield introTextBox">
+      <p style="font-size: 1.1em;"><%=theUser.intro%></p>
+    </div>
+  </div>
+
+</form>
